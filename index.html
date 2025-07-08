@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <title>Реклама — TOP MODS</title>
+  <title>Live Grand RP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(to bottom, #141e30, #243b55);
       color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
     .lang-switch {
       position: absolute;
@@ -19,92 +19,99 @@
       right: 10px;
     }
     .lang-switch button {
-      margin: 5px;
-      padding: 5px 10px;
+      margin: 3px;
+      padding: 6px 12px;
       border: none;
+      border-radius: 5px;
       background: #00ffcc;
       color: #000;
-      border-radius: 5px;
+      font-weight: bold;
       cursor: pointer;
+    }
+    h1 {
+      font-size: 36px;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 20px;
     }
     a.button {
       display: inline-block;
-      margin: 20px 0;
       padding: 12px 25px;
+      margin: 10px;
       background-color: #00ffcc;
       color: #000;
       text-decoration: none;
       font-weight: bold;
       border-radius: 10px;
     }
+    .section {
+      margin-top: 50px;
+    }
     ul {
       text-align: left;
-      max-width: 400px;
+      max-width: 500px;
       margin: auto;
-    }
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 600px;
-      border: none;
-      margin-top: 20px;
+      font-size: 16px;
     }
     footer {
-      margin-top: 30px;
-      color: #ccc;
+      margin-top: 50px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
   <div class="lang-switch">
-    <button onclick="setLang('ru')">Рус</button>
-    <button onclick="setLang('uz')">O'zbek</button>
+    <button onclick="setLang('uz')">O‘zbekcha</button>
+    <button onclick="setLang('ru')">Русский</button>
   </div>
 
-  <h1 id="title">📢 Реклама в Telegram</h1>
-  <p id="desc">У нас активная аудитория. Закажите прямо сейчас.</p>
-  
-  <ul id="prices">
-    <li>🗓 5 дней — 200₽</li>
-    <li>🗓 10 дней — 350₽</li>
-    <li>🗓 30 дней — 700₽</li>
-  </ul>
+  <h1 id="title">🎮 Live Grand RP</h1>
+  <p id="desc">Eng yaxshi mobil RP tajribasiga xush kelibsiz! O‘yinda sizni haqiqiy hayotga yaqin tizimlar kutmoqda.</p>
 
-  <a href="https://t.me/rude_lxz" class="button" id="contact">Связаться в Telegram</a>
+  <a href="download.zip" class="button" download id="downloadBtn">📥 Yuklab olish</a>
+  <a href="https://t.me/livegrandcrmp" class="button" target="_blank" id="telegramBtn">💬 Telegramga o'tish</a>
 
-  <h2 id="formtitle">Оставьте заявку</h2>
+  <div class="section">
+    <h2 id="featuresTitle">🔧 O‘yin tizimlari</h2>
+    <ul id="featuresList">
+      <li>👑 Adminlar jamoasi</li>
+      <li>🛠 Dasturchilar (Developerlar)</li>
+      <li>👮‍♂️ LSPD (Politsiya)</li>
+      <li>🧑‍⚖️ Moderatorlar nazorati</li>
+    </ul>
+  </div>
 
-  <iframe 
-    src="https://docs.google.com/forms/d/1kOevWlztU_DtKrBHxEvvw6QQSsbrYk4HfEv5E4_K95s/viewform?embedded=true" 
-    frameborder="0" 
-    marginheight="0" 
-    marginwidth="0">
-  Загрузка…
-  </iframe>
-
-  <footer>© 2025 TOP MODS. Все права защищены.</footer>
+  <footer>© 2025 Live Grand RP. Barcha huquqlar himoyalangan.</footer>
 
   <script>
     function setLang(lang) {
       if (lang === 'ru') {
-        document.getElementById("title").innerText = "📢 Реклама в Telegram";
-        document.getElementById("desc").innerText = "У нас активная аудитория. Закажите прямо сейчас.";
-        document.getElementById("prices").innerHTML = `
-          <li>🗓 5 дней — 200₽</li>
-          <li>🗓 10 дней — 350₽</li>
-          <li>🗓 30 дней — 700₽</li>`;
-        document.getElementById("contact").innerText = "Связаться в Telegram";
-        document.getElementById("formtitle").innerText = "Оставьте заявку";
+        document.getElementById("title").innerText = "🎮 Live Grand RP";
+        document.getElementById("desc").innerText = "Добро пожаловать в лучший мобильный RP проект! Вас ждут реалистичные игровые системы.";
+        document.getElementById("downloadBtn").innerText = "📥 Скачать игру";
+        document.getElementById("telegramBtn").innerText = "💬 Перейти в Telegram";
+        document.getElementById("featuresTitle").innerText = "🔧 Игровые системы";
+        document.getElementById("featuresList").innerHTML = `
+          <li>👑 Команда админов</li>
+          <li>🛠 Разработчики проекта</li>
+          <li>👮‍♂️ LSPD (полиция)</li>
+          <li>🧑‍⚖️ Модераторы и контроль</li>`;
       } else {
-        document.getElementById("title").innerText = "📢 Telegramda reklama";
-        document.getElementById("desc").innerText = "Faol auditoriyamiz bor. Hoziroq buyurtma bering.";
-        document.getElementById("prices").innerHTML = `
-          <li>🗓 5 kun — 200 rubl</li>
-          <li>🗓 10 kun — 350 rubl</li>
-          <li>🗓 30 kun — 700 rubl</li>`;
-        document.getElementById("contact").innerText = "Telegramga yozish";
-        document.getElementById("formtitle").innerText = "Ariza qoldiring";
+        document.getElementById("title").innerText = "🎮 Live Grand RP";
+        document.getElementById("desc").innerText = "Eng yaxshi mobil RP tajribasiga xush kelibsiz! O‘yinda sizni haqiqiy hayotga yaqin tizimlar kutmoqda.";
+        document.getElementById("downloadBtn").innerText = "📥 Yuklab olish";
+        document.getElementById("telegramBtn").innerText = "💬 Telegramga o'tish";
+        document.getElementById("featuresTitle").innerText = "🔧 O‘yin tizimlari";
+        document.getElementById("featuresList").innerHTML = `
+          <li>👑 Adminlar jamoasi</li>
+          <li>🛠 Dasturchilar (Developerlar)</li>
+          <li>👮‍♂️ LSPD (Politsiya)</li>
+          <li>🧑‍⚖️ Moderatorlar nazorati</li>`;
       }
     }
   </script>
