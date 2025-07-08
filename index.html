@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Реклама — TOP MODS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .lang-switch button {
+      margin: 5px;
+      padding: 5px 10px;
+      border: none;
+      background: #00ffcc;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    a.button {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 12px 25px;
+      background-color: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+    ul {
+      text-align: left;
+      max-width: 400px;
+      margin: auto;
+    }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 600px;
+      border: none;
+      margin-top: 20px;
+    }
+    footer {
+      margin-top: 30px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button onclick="setLang('ru')">Рус</button>
+    <button onclick="setLang('uz')">O'zbek</button>
+  </div>
+
+  <h1 id="title">📢 Реклама в Telegram</h1>
+  <p id="desc">У нас активная аудитория. Закажите прямо сейчас.</p>
+  
+  <ul id="prices">
+    <li>🗓 5 дней — 200₽</li>
+    <li>🗓 10 дней — 350₽</li>
+    <li>🗓 30 дней — 700₽</li>
+  </ul>
+
+  <a href="https://t.me/rude_lxz" class="button" id="contact">Связаться в Telegram</a>
+
+  <h2 id="formtitle">Оставьте заявку</h2>
+
+  <iframe 
+    src="https://docs.google.com/forms/d/1kOevWlztU_DtKrBHxEvvw6QQSsbrYk4HfEv5E4_K95s/viewform?embedded=true" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0">
+  Загрузка…
+  </iframe>
+
+  <footer>© 2025 TOP MODS. Все права защищены.</footer>
+
+  <script>
+    function setLang(lang) {
+      if (lang === 'ru') {
+        document.getElementById("title").innerText = "📢 Реклама в Telegram";
+        document.getElementById("desc").innerText = "У нас активная аудитория. Закажите прямо сейчас.";
+        document.getElementById("prices").innerHTML = `
+          <li>🗓 5 дней — 200₽</li>
+          <li>🗓 10 дней — 350₽</li>
+          <li>🗓 30 дней — 700₽</li>`;
+        document.getElementById("contact").innerText = "Связаться в Telegram";
+        document.getElementById("formtitle").innerText = "Оставьте заявку";
+      } else {
+        document.getElementById("title").innerText = "📢 Telegramda reklama";
+        document.getElementById("desc").innerText = "Faol auditoriyamiz bor. Hoziroq buyurtma bering.";
+        document.getElementById("prices").innerHTML = `
+          <li>🗓 5 kun — 200 rubl</li>
+          <li>🗓 10 kun — 350 rubl</li>
+          <li>🗓 30 kun — 700 rubl</li>`;
+        document.getElementById("contact").innerText = "Telegramga yozish";
+        document.getElementById("formtitle").innerText = "Ariza qoldiring";
+      }
+    }
+  </script>
+</body>
+</html>
